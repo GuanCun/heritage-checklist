@@ -1,0 +1,9 @@
+# Vercel 部署时忽略的文件
+node_modules/
+.git/
+.gitignore
+README.md
+*.log
+.DS_Store
+.vscode/
+.idea/
