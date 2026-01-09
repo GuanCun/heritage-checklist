@@ -60,10 +60,10 @@ body {
   color: #000;
 }
 
-/* TabBar - 小程序风格 */
+/* TabBar - 精简克制风格 */
 .tabbar {
   background-color: #fff;
-  border-top: 1px solid #e5e5e5;
+  border-top: 0.5px solid rgba(0, 0, 0, 0.08);
   display: flex;
   height: 50px;
   position: fixed;
@@ -71,6 +71,7 @@ body {
   left: 0;
   right: 0;
   z-index: 100;
+  padding: 0;
 }
 
 .tabbar-item {
@@ -79,10 +80,15 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #999;
-  font-size: 12px;
+  gap: 2px;
+  color: #8e8e93;
   cursor: pointer;
-  transition: color 0.2s;
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tabbar-item:active {
+  opacity: 0.6;
 }
 
 .tabbar-item.active {
@@ -90,8 +96,17 @@ body {
 }
 
 .tabbar-icon {
-  font-size: 20px;
-  margin-bottom: 2px;
+  transition: transform 0.2s ease;
+}
+
+.tabbar-item.active .tabbar-icon {
+  transform: translateY(-1px);
+}
+
+.tabbar-label {
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
 }
 
 /* 进度条 */
